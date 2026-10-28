@@ -208,7 +208,7 @@ DECIDED (user, 2026-10-22): keep CE's default, no extra ammo for enemy turrets.
 ## 4. VFE Pirates gauntlet raid ships (added 2026-10-26, user request)
 
 Vanilla Factions Expanded - Pirates (`oskarpotocki.vfe.pirates`, optional; source reference
-`_Mod_Source_Reference/VanillaFactionsExpanded-Pirates` @be4040e). The gauntlet raid (`VFEP_GauntletStrat`, arrival
+`Model mods/_Mod_Source_Reference/VanillaFactionsExpanded-Pirates` @be4040e). The gauntlet raid (`VFEP_GauntletStrat`, arrival
 `VFEP_GauntletDrop`, `PawnsArrivalModeWorker_Gauntlet`) drops one 5x3 gauntlet ship per 8 raiders: skyfaller defs
 `VFEP_Ship_Black/Green/Orange/Red` (thingClass `VFEPirates.IncomingSmoker : Skyfaller`, parent `SkyfallerBase`)
 carrying a `Building_CrashedShip` (600 HP turret with the raiders in its own container; killed leavings 120 steel,
