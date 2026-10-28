@@ -1,0 +1,39 @@
+<Project Sdk="Microsoft.NET.Sdk">
+	<!-- One net48 DLL for RimWorld 1.6 and 1.7, built like Combat Extended itself (net48 against the 1.6 reference
+	     assemblies). RimWorld 1.7 runs it through its Unity redirects, as it runs CE.
+
+	     Release build:  dotnet build VGECEPatch.csproj -c Release -->
+	<PropertyGroup>
+		<TargetFramework>net48</TargetFramework>
+		<LangVersion>latest</LangVersion>
+		<Nullable>disable</Nullable>
+		<ImplicitUsings>disable</ImplicitUsings>
+		<AssemblyName>VGECEPatch</AssemblyName>
+		<RootNamespace>VGECEPatch</RootNamespace>
+		<OutputPath>..\Assemblies\</OutputPath>
+		<AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+		<GenerateDependencyFile>false</GenerateDependencyFile>
+		<CopyLocalLockFileAssemblies>false</CopyLocalLockFileAssemblies>
+		<DebugType>none</DebugType>
+		<DefaultItemExcludes>$(DefaultItemExcludes);obj/**;bin/**</DefaultItemExcludes>
+		<!-- Point these at your installed Combat Extended and Vanilla Gravship Expanded - Chapter 1 folders -->
+		<CEDir>C:\Games\Steam\steamapps\workshop\content\294100\2890901044</CEDir>
+		<VGEDir>C:\Games\Steam\steamapps\workshop\content\294100\3609835606</VGEDir>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Krafs.Rimworld.Ref" Version="1.6.4871" />
+		<PackageReference Include="Lib.Harmony" Version="2.4.3" ExcludeAssets="runtime" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<Reference Include="CombatExtended">
+			<HintPath>$(CEDir)\Assemblies\CombatExtended.dll</HintPath>
+			<Private>false</Private>
+		</Reference>
+		<Reference Include="VanillaGravshipExpanded">
+			<HintPath>$(VGEDir)\1.6\Assemblies\VanillaGravshipExpanded.dll</HintPath>
+			<Private>false</Private>
+		</Reference>
+	</ItemGroup>
+</Project>

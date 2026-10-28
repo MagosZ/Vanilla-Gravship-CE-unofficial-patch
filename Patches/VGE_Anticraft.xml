@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+	<!-- Anticraft caster beam: armor penetration tripled (0.5 -> 1.5) and damage doubled (5 -> 10),
+	     only with Combat Extended loaded.
+	     The beam stays a vanilla projectile, so CE checks VGE's vanilla penetration against heat armor with its own
+	     rule (damage x (pen - armor) / pen, 0 when armor >= pen); at 0.5 power armor (0.54 heat) blocked every hit.
+	     Damage doubled because CE's sturdier bodies (centipedes) still soaked up the 5-damage hits.
+	     Also used by Chapter 2's enemy anticraft caster. -->
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Combat Extended</li>
+		</mods>
+		<match Class="PatchOperationSequence">
+			<operations>
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/ThingDef[defName="VGE_Bullet_AnticraftCaster"]/projectile/armorPenetrationBase</xpath>
+					<value>
+						<armorPenetrationBase>1.5</armorPenetrationBase>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/ThingDef[defName="VGE_Bullet_AnticraftCaster"]/projectile/damageAmountBase</xpath>
+					<value>
+						<damageAmountBase>10</damageAmountBase>
+					</value>
+				</li>
+			</operations>
+		</match>
+	</Operation>
+
+</Patch>

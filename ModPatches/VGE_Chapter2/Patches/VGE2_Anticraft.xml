@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+	<!-- Anticraft emitter beam: armor penetration tripled (0.85 -> 2.55) and damage doubled (16 -> 32),
+	     only with Combat Extended loaded.
+	     See Patches/VGE_Anticraft.xml for why. The enemy anticraft beam (VGE_Bullet_AnticraftBeam) is a different
+	     weapon and is left as it is. -->
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Combat Extended</li>
+		</mods>
+		<match Class="PatchOperationSequence">
+			<operations>
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/ThingDef[defName="VGE_Bullet_AnticraftEmitter"]/projectile/armorPenetrationBase</xpath>
+					<value>
+						<armorPenetrationBase>2.55</armorPenetrationBase>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/ThingDef[defName="VGE_Bullet_AnticraftEmitter"]/projectile/damageAmountBase</xpath>
+					<value>
+						<damageAmountBase>32</damageAmountBase>
+					</value>
+				</li>
+			</operations>
+		</match>
+	</Operation>
+
+</Patch>

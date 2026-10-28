@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+	<!-- VGE asteroid shower and space debris projectiles become flat-flying CE projectiles (DESIGN.md section 2) -->
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/ThingDef[@Name="VGE_SpaceDebrisBase"]/thingClass</xpath>
+		<value>
+			<thingClass>VGECEPatch.ProjectileCE_VGESpace</thingClass>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/ThingDef[@Name="VGE_AsteroidBase"]/thingClass</xpath>
+		<value>
+			<thingClass>VGECEPatch.ProjectileCE_VGEAsteroid</thingClass>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/ThingDef[defName="VGE_LargeDebris"]/thingClass</xpath>
+		<value>
+			<thingClass>VGECEPatch.ProjectileCE_VGESpaceDebris</thingClass>
+		</value>
+	</Operation>
+
+	<!-- Every projectile node in the chain gets CE's properties class -->
+	<Operation Class="PatchOperationAttributeSet">
+		<xpath>Defs/ThingDef[@Name="VGE_SpaceDebrisBase" or @Name="VGE_AsteroidBase" or defName="VGE_SmallDebris" or defName="VGE_MediumDebris" or defName="VGE_LargeDebris" or defName="VGE_SmallAsteroid_Projectile" or defName="VGE_MediumAsteroid" or defName="VGE_LargeAsteroid"]/projectile</xpath>
+		<attribute>Class</attribute>
+		<value>CombatExtended.ProjectilePropertiesCE</value>
+	</Operation>
+
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/ThingDef[@Name="VGE_SpaceDebrisBase"]/projectile</xpath>
+		<value>
+			<trajectoryWorker>VGECEPatch.StraightTrajectoryWorker</trajectoryWorker>
+			<flyOverhead>false</flyOverhead>
+			<gravityFactor>0</gravityFactor>
+			<suppressionFactor>0</suppressionFactor>
+			<airborneSuppressionFactor>0</airborneSuppressionFactor>
+			<castShadow>false</castShadow>
+		</value>
+	</Operation>
+
+	<!-- CE speed is cells per second; vanilla moves speed/100 cells per tick, so CE speed = VGE speed x 0.6 -->
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/ThingDef[defName="VGE_SmallAsteroid_Projectile"]/projectile/speed</xpath>
+		<value>
+			<speed>19.2</speed>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/ThingDef[defName="VGE_MediumAsteroid"]/projectile/speed</xpath>
+		<value>
+			<speed>14.4</speed>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/ThingDef[defName="VGE_LargeAsteroid"]/projectile/speed</xpath>
+		<value>
+			<speed>10.8</speed>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/ThingDef[defName="VGE_SmallDebris"]/projectile/speed</xpath>
+		<value>
+			<speed>27.6</speed>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/ThingDef[defName="VGE_MediumDebris"]/projectile/speed</xpath>
+		<value>
+			<speed>21.6</speed>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/ThingDef[defName="VGE_LargeDebris"]/projectile/speed</xpath>
+		<value>
+			<speed>15.6</speed>
+		</value>
+	</Operation>
+
+	<!-- CIWS interception pool: 5 (a drop pod has 22) -->
+	<Operation Class="PatchOperationConditional">
+		<xpath>Defs/ThingDef[@Name="VGE_SpaceDebrisBase"]/comps</xpath>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>Defs/ThingDef[@Name="VGE_SpaceDebrisBase"]</xpath>
+			<value>
+				<comps />
+			</value>
+		</nomatch>
+	</Operation>
+
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/ThingDef[@Name="VGE_SpaceDebrisBase"]/comps</xpath>
+		<value>
+			<li Class="CombatExtended.CompProperties_CIWSImpactHandler">
+				<compClass>VGECEPatch.CompCIWSImpactHandler_VGESpace</compClass>
+				<HP>5</HP>
+			</li>
+		</value>
+	</Operation>
+
+	<!-- CIWS hit check: swept along the round's path, radius in cells = drawSize x radiusFactor + radiusBonus.
+	     drawSize is 1 / 2 / 3 (small / medium / large), so 1.5 and 1.5 give 3 / 4.5 / 6. Tune here, no rebuild needed. -->
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/ThingDef[@Name="VGE_SpaceDebrisBase"]/comps</xpath>
+		<value>
+			<li Class="VGECEPatch.CompProperties_CIWSTarget_VGESpace">
+				<radiusFactor>1.5</radiusFactor>
+				<radiusBonus>1.5</radiusBonus>
+			</li>
+		</value>
+	</Operation>
+
+</Patch>

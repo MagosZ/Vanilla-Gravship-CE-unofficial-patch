@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+	<!-- CE gives every skyfaller one interception pool from SkyfallerBase (22 HP, a drop pod's). These multipliers
+	     scale it for larger craft; every child of the patched parent inherits the multiplier (Source/CIWSPoolMultiplier.cs). -->
+
+	<!-- Shuttles: 3 times a drop pod (66). Covers every def built on vanilla's ShuttleSkyfallerBase, other mods' too. -->
+	<Operation Class="PatchOperationAddModExtension">
+		<xpath>Defs/ThingDef[@Name="ShuttleSkyfallerBase"]</xpath>
+		<value>
+			<li Class="VGECEPatch.CIWSPoolMultiplier">
+				<multiplier>3</multiplier>
+			</li>
+		</value>
+	</Operation>
+
+	<!-- VFE Pirates gauntlet raid ships: 10 times a drop pod (220) -->
+	<Operation Class="PatchOperationConditional">
+		<xpath>Defs/ThingDef[@Name="VFEP_Ship"]</xpath>
+		<match Class="PatchOperationAddModExtension">
+			<xpath>Defs/ThingDef[@Name="VFEP_Ship"]</xpath>
+			<value>
+				<li Class="VGECEPatch.CIWSPoolMultiplier">
+					<multiplier>10</multiplier>
+				</li>
+			</value>
+		</match>
+	</Operation>
+
+</Patch>

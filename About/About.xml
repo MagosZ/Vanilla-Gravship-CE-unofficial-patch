@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ModMetaData>
+	<name>Vanilla Gravship CE Patch (Unofficial)</name>
+	<author>MagosZ</author>
+	<packageId>you.vgecepatch.unofficial</packageId>
+	<supportedVersions>
+		<li>1.6</li>
+		<li>1.7</li>
+	</supportedVersions>
+	<description>Unofficial Combat Extended patch for Vanilla Gravship Expanded. CE point-defense (CIWS) turrets can now shoot down VGE threats they used to ignore, and several VGE weapons and defences are adjusted to work under CE.
+
+ESCAPE POD CRASH
+- The incoming escape pod is a CIWS target, like an enemy drop pod, with the same 22 hit points of interception damage.
+- Shot down, it breaks up in the air: no hole in the roof, nothing destroyed below. It is gone, with whatever was inside.
+
+ASTEROID SHOWER AND SPACE DEBRIS
+- Asteroids and space debris are now CE projectiles. They still fly flat across the map at the same speed and explode on the first thing in their path, using CE collision and CE explosions. They fly very low (height 0.02 in CE units), so they hit walls, standing pawns and downed pawns alike.
+- Every turret with a CE anti-projectile CIWS mode targets them. Each one takes 5 hit points of interception damage (a drop pod takes 22). A round counts as a hit if it passes within 3 / 4.5 / 6 cells of a small / medium / large rock at any point of its path, so bigger rocks are easier to hit and fast rounds can't skip past.
+- A turret only fires when it has line of sight to the point where it will meet the projectile; walls block.
+- Shot down, it breaks up without exploding and drops what VGE would drop on impact: a vacstone chunk from an asteroid (medium and large ones sometimes carry steel, uranium, gold or plasteel), sometimes steel slag from large debris.
+- They don't suppress pawns.
+
+Both new targets are on by default in every turret's "Manage CIWS targets" list.
+
+CHAPTER 2 COMPACT TURRETS (only when Vanilla Gravship Expanded - Chapter 2 is active)
+The gravship minigun, autocannon and uranium slug turrets, and the enemy versions on enemy gravships, become CE turrets with CE ammo, magazines and reloading instead of refuelling with steel or uranium.
+Balance rule: every stat is CE's value for the matching turret, scaled by how the VGE turret compares with its vanilla version. That covers range, bursts, cooldown, magazine, hit points, power, cost, build work and accuracy. The autocannon and uranium slug are compared with their vanilla namesakes; the minigun's gun with the hand-held minigun and its building with the mini-turret. Like CE's turrets, they no longer explode when destroyed.
+- Minigun: 7.62x51mm NATO, 250-round magazine, range 56, bursts of 16.
+- Autocannon: 20x102mm, 200-round magazine, range 71, bursts of 7.
+- Uranium slug: 40x311mmR, 20-round magazine, range 77 (minimum 5).
+Enemy turrets start with one full magazine, as every CE enemy turret does.
+
+VFE PIRATES GAUNTLET RAID (only when Vanilla Factions Expanded - Pirates is active)
+- Incoming gauntlet ships are CIWS targets with 220 hit points of interception damage (10 times a drop pod's), on by default. Ships of a friendly gauntlet raid are left alone.
+- As with CE drop pods, each hit wounds a raider inside; a ship shot down drops its raiders dead under it and leaves its wreck's salvage, with no crash explosion.
+
+GRAVSHIP ARMOR (only when Vanilla Gravship Expanded - Chapter 2 is active)
+Hostile CE projectiles, mortar shells included, explode on the first gravship armor they cross, as VGE intends for its own projectiles. The blast stays on the outside of the hull.
+
+ANTICRAFT CASTER AND EMITTER
+Their beams' armor penetration is tripled (caster 0.5 to 1.5, emitter 0.85 to 2.55) and their damage per shot doubled (caster 5 to 10, emitter 16 to 32), because under CE's heat armor rule and sturdier bodies they barely hurt armored people or mechanoids. Applies only with Combat Extended loaded.
+
+SHUTTLES
+Every shuttle (anything built on vanilla's shuttle skyfaller, other mods' shuttles included) takes 3 times a drop pod's interception damage to shoot down: 66 instead of CE's 22.
+
+COMPATIBILITY
+RimWorld 1.6 and 1.7. Requires Harmony, Combat Extended and Vanilla Gravship Expanded - Chapter 1; load after them and after Chapter 2. CIWS must be enabled in the CE settings. Don't add the mod while an asteroid shower or debris event is under way.</description>
+	<modDependencies>
+		<li>
+			<packageId>brrainz.harmony</packageId>
+			<displayName>Harmony</displayName>
+			<steamWorkshopUrl>steam://url/CommunityFilePage/2009463077</steamWorkshopUrl>
+		</li>
+		<li>
+			<packageId>CETeam.CombatExtended</packageId>
+			<displayName>Combat Extended</displayName>
+			<steamWorkshopUrl>steam://url/CommunityFilePage/2890901044</steamWorkshopUrl>
+		</li>
+		<li>
+			<packageId>vanillaexpanded.gravship</packageId>
+			<displayName>Vanilla Gravship Expanded - Chapter 1</displayName>
+			<steamWorkshopUrl>steam://url/CommunityFilePage/3609835606</steamWorkshopUrl>
+		</li>
+	</modDependencies>
+	<loadAfter>
+		<li>brrainz.harmony</li>
+		<li>CETeam.CombatExtended</li>
+		<li>vanillaexpanded.gravship</li>
+		<li>vanillaexpanded.gravship2</li>
+	</loadAfter>
+</ModMetaData>

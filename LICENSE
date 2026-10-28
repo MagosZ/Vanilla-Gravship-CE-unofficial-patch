@@ -1,0 +1,13 @@
+Vanilla Gravship CE Patch (Unofficial)
+
+This work is licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International
+License (CC BY-NC-SA 4.0). Full license text: https://creativecommons.org/licenses/by-nc-sa/4.0/legalcode
+
+It is an unofficial compatibility patch between Combat Extended
+(https://github.com/CombatExtended-Continued/CombatExtended), which is licensed under CC BY-NC-SA 4.0, and
+Vanilla Gravship Expanded by the Vanilla Expanded team (https://github.com/Vanilla-Expanded). It calls both
+through Harmony and inheritance. A few short pieces follow VGE's code closely so VGE's behaviour carries over to CE
+projectiles: the asteroid and debris spawn methods (Source/Patches/SpaceProjectileSpawn.cs), their impact loot
+(Source/Projectiles/ProjectileCE_VGESpace.cs) and the point-defence intercept chance
+(Source/Patches/VGEPointDefence.cs). Vanilla Gravship Expanded and Combat Extended belong to their authors; this
+license covers only this patch's own work.
