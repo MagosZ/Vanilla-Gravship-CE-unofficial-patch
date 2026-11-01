@@ -64,6 +64,15 @@ with Combat Extended loaded:
 | Anticraft caster (also the enemy caster) | 0.5 → 1.5 | 5 → 10 |
 | Anticraft emitter (Chapter 2) | 0.85 → 2.55 | 16 → 32 |
 
+**Combat vacsuit** (Chapter 2 active). CE patches the plain and prestige vacsuits but not this one, so with Combat
+Extended loaded it gets armor scaled from CE's plain vacsuit by the vanilla ratio, plus bulk. Hands and feet are
+covered, and the helmet gets CE's smoke protection and weaker armor on the eyes, nose and jaw, as on the plain vacsuit.
+
+| | Sharp | Blunt | Bulk / worn bulk |
+|---|---|---|---|
+| Combat vacsuit | 0.88 → 5.92 | 0.42 → 11.76 | 80 / 18 |
+| Combat vacsuit helmet | 0.88 → 5.92 | 0.42 → 12.25 | 4 / 1 |
+
 ## Requirements and load order
 
 - Harmony, Combat Extended, Vanilla Gravship Expanded - Chapter 1.
@@ -99,7 +108,7 @@ RimWorld first: it locks the DLL while the mod is active.
 Layout:
 - `Patches/`: XML patches always applied: asteroids and debris as CE projectiles (`VGE_SpaceProjectiles.xml`),
   shuttle and gauntlet ship interception pools (`CIWSPools.xml`), anticraft caster beam (`VGE_Anticraft.xml`).
-- `ModPatches/VGE_Chapter2/`: Chapter 2 patches (compact turrets, anticraft emitter), loaded by `loadFolders.xml`
+- `ModPatches/VGE_Chapter2/`: Chapter 2 patches (compact turrets, anticraft emitter, combat vacsuit), loaded by `loadFolders.xml`
   only when Chapter 2 is active.
 - `Source/Projectiles/`: the CE asteroid and debris projectile classes, their straight-line trajectory worker and
   their CIWS hit check.

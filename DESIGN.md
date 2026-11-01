@@ -282,7 +282,24 @@ emitter 25.2 vs power, 26.2 vs recon, 28.9 vs a centipede (VGE's values gave 0 /
 buildings and ships is unchanged (CE's armor code is pawns only). The enemy anticraft beam
 (`VGE_Bullet_AnticraftBeam`, its burning strike) is a different weapon and is left alone.
 
-## 7. Known differences and risks
+## 7. Chapter 2 combat vacsuit (added 2026-11-01, user request)
+
+CE patches Odyssey's plain vacsuit and VGE Chapter 1's prestige vacsuit (sharp 3.5, blunt 7, bulk 80 / 12, hands and
+feet covered; helmet bulk 4 / 1, smoke sensitivity -1, partial armor) but has no Chapter 2 folder, so
+`VGE_Apparel_CombatVacsuit` and its helmet kept vanilla-scale armor (0.88 sharp, 0.42 blunt) and no bulk.
+
+`ModPatches/VGE_Chapter2/Patches/VGE2_CombatVacsuit.xml`, only when Combat Extended is loaded. Armor is CE's plain
+vacsuit value x (combat / plain, vanilla values); the user chose this over scaling from power armor:
+
+| | Sharp | Blunt | Bulk / worn |
+|---|---|---|---|
+| Suit | 3.5 x 0.88/0.52 = 5.92 | 7 x 0.42/0.25 = 11.76 | 80 / 18 (plain 80 / 12; worn set by the user) |
+| Helmet | 3.5 x 0.88/0.52 = 5.92 | 7 x 0.42/0.24 = 12.25 | 4 / 1 (as plain) |
+
+Copied from CE's plain vacsuit: hands and feet covered; helmet smoke sensitivity -1, eyes at 0.70 and nose and jaw at
+0.50 of its armor. Heat (0.78), mass, speed and vacuum resistance stay VGE's.
+
+## 8. Known differences and risks
 
 - Explosions follow CE rules instead of vanilla.
 - Shields: CE only lets a shield stop a projectile whose launcher is hostile (unless the shield intercepts

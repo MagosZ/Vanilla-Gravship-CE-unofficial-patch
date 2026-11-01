@@ -40,6 +40,9 @@ Hostile CE projectiles, mortar shells included, explode on the first gravship ar
 ANTICRAFT CASTER AND EMITTER
 Their beams' armor penetration is tripled (caster 0.5 to 1.5, emitter 0.85 to 2.55) and their damage per shot doubled (caster 5 to 10, emitter 16 to 32), because under CE's heat armor rule and sturdier bodies they barely hurt armored people or mechanoids. Applies only with Combat Extended loaded.
 
+COMBAT VACSUIT (only when Vanilla Gravship Expanded - Chapter 2 is active)
+CE patches the plain and prestige vacsuits but not this one. Its armor is now scaled from CE's plain vacsuit by the vanilla ratio: suit sharp 5.92 and blunt 11.76, helmet sharp 5.92 and blunt 12.25. The suit has bulk 80 and worn bulk 18 and covers hands and feet; the helmet has bulk 4 and worn bulk 1, CE's smoke protection, and weaker armor on the eyes, nose and jaw. Applies only with Combat Extended loaded.
+
 SHUTTLES
 Every shuttle (anything built on vanilla's shuttle skyfaller, other mods' shuttles included) takes 3 times a drop pod's interception damage to shoot down: 66 instead of CE's 22.
 

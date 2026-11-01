@@ -84,6 +84,11 @@ matching game conditions).
 - [ ] A caster burst now wounds a pawn in power armor (about 6 damage per hit); the emitter about 25 per hit.
 - [ ] Centipedes take about 8 (caster) / 29 (emitter) per hit.
 
+## Combat vacsuit (Chapter 2 active)
+- [ ] Info card: suit sharp 5.92, blunt 11.76, bulk 80, worn bulk 18, covers hands and feet.
+- [ ] Info card: helmet sharp 5.92, blunt 12.25, bulk 4, worn bulk 1, with weaker armor listed for eyes, nose and jaw.
+- [ ] No XML errors at startup.
+
 ## Save / load
 
 - [ ] Save and load mid-shower with asteroids in flight: they keep flying straight and still collide.

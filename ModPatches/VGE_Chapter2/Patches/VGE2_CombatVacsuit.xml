@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+	<!-- Combat vacsuit and helmet: CE patches the plain and prestige vacsuits but not Chapter 2's, which keeps vanilla-scale
+	     sharp and blunt armor and has no bulk. Only with Combat Extended loaded.
+	     Armor = CE's plain vacsuit value x (combat vacsuit / plain vacsuit, both vanilla):
+	     suit sharp 3.5 x 0.88/0.52 = 5.92, blunt 7 x 0.42/0.25 = 11.76; helmet sharp 3.5 x 0.88/0.52 = 5.92,
+	     blunt 7 x 0.42/0.24 = 12.25. Heat stays VGE's, as CE keeps it on the plain suit.
+	     Suit bulk as CE's plain vacsuit (80), worn bulk 18 (plain 12). The rest follows CE's plain vacsuit: hands and feet
+	     covered; helmet bulk 4 / 1, smoke sensitivity -1, weaker armor on eyes (0.70) and nose and jaw (0.50). -->
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Combat Extended</li>
+		</mods>
+		<match Class="PatchOperationSequence">
+			<operations>
+
+				<!-- ========== Combat vacsuit ========== -->
+
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/ThingDef[defName="VGE_Apparel_CombatVacsuit"]/statBases</xpath>
+					<value>
+						<Bulk>80</Bulk>
+						<WornBulk>18</WornBulk>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/ThingDef[defName="VGE_Apparel_CombatVacsuit"]/statBases/ArmorRating_Sharp</xpath>
+					<value>
+						<ArmorRating_Sharp>5.92</ArmorRating_Sharp>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/ThingDef[defName="VGE_Apparel_CombatVacsuit"]/statBases/ArmorRating_Blunt</xpath>
+					<value>
+						<ArmorRating_Blunt>11.76</ArmorRating_Blunt>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/ThingDef[defName="VGE_Apparel_CombatVacsuit"]/apparel/bodyPartGroups</xpath>
+					<value>
+						<li>Hands</li>
+						<li>Feet</li>
+					</value>
+				</li>
+
+				<!-- ========== Combat vacsuit helmet ========== -->
+
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/ThingDef[defName="VGE_Apparel_CombatVacsuitHelmet"]/statBases</xpath>
+					<value>
+						<Bulk>4</Bulk>
+						<WornBulk>1</WornBulk>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/ThingDef[defName="VGE_Apparel_CombatVacsuitHelmet"]/statBases/ArmorRating_Sharp</xpath>
+					<value>
+						<ArmorRating_Sharp>5.92</ArmorRating_Sharp>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/ThingDef[defName="VGE_Apparel_CombatVacsuitHelmet"]/statBases/ArmorRating_Blunt</xpath>
+					<value>
+						<ArmorRating_Blunt>12.25</ArmorRating_Blunt>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/ThingDef[defName="VGE_Apparel_CombatVacsuitHelmet"]/equippedStatOffsets</xpath>
+					<value>
+						<SmokeSensitivity>-1</SmokeSensitivity>
+					</value>
+				</li>
+				<li Class="PatchOperationAddModExtension">
+					<xpath>Defs/ThingDef[defName="VGE_Apparel_CombatVacsuitHelmet"]</xpath>
+					<value>
+						<li Class="CombatExtended.PartialArmorExt">
+							<stats>
+								<li>
+									<ArmorRating_Sharp>0.70</ArmorRating_Sharp>
+									<parts>
+										<li>Eye</li>
+									</parts>
+								</li>
+								<li>
+									<ArmorRating_Blunt>0.70</ArmorRating_Blunt>
+									<parts>
+										<li>Eye</li>
+									</parts>
+								</li>
+								<li>
+									<ArmorRating_Sharp>0.50</ArmorRating_Sharp>
+									<parts>
+										<li>Nose</li>
+										<li>Jaw</li>
+									</parts>
+								</li>
+								<li>
+									<ArmorRating_Blunt>0.50</ArmorRating_Blunt>
+									<parts>
+										<li>Nose</li>
+										<li>Jaw</li>
+									</parts>
+								</li>
+							</stats>
+						</li>
+					</value>
+				</li>
+
+			</operations>
+		</match>
+	</Operation>
+
+</Patch>
