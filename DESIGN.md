@@ -299,7 +299,16 @@ vacsuit value x (combat / plain, vanilla values); the user chose this over scali
 Copied from CE's plain vacsuit: hands and feet covered; helmet smoke sensitivity -1, eyes at 0.70 and nose and jaw at
 0.50 of its armor. Heat (0.78), mass, speed and vacuum resistance stay VGE's.
 
-## 8. Known differences and risks
+## 8. Chapter 2 belt gear bulk (added 2026-11-01, user request)
+
+CE's VGE patches stop at Chapter 1 (oxygen pack 8 / 1.2, canister 0.1), so three Chapter 2 belt items had no bulk.
+`ModPatches/VGE_Chapter2/Patches/VGE2_Packs.xml`, only when Combat Extended is loaded (bulk / worn bulk):
+- `VGE_Apparel_Astrorig` 8 / 3: CE's jump pack.
+- `VGE_Apparel_DisposableOxygenPack` 5 / 1: CE's oxygen pack scaled by mass (3 kg against 4.6 kg), rounded.
+- `VGE_GravshipBombardmentTargeter` 1 / 0.5: judgement call, no direct CE match; below CE's smokepop belt (3 / 1).
+Mass stays VGE's. Their oxygen, jump and targeting systems are VGE's own and don't touch CE's ammo rules.
+
+## 9. Known differences and risks
 
 - Explosions follow CE rules instead of vanilla.
 - Shields: CE only lets a shield stop a projectile whose launcher is hostile (unless the shield intercepts

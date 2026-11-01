@@ -43,6 +43,9 @@ Their beams' armor penetration is tripled (caster 0.5 to 1.5, emitter 0.85 to 2.
 COMBAT VACSUIT (only when Vanilla Gravship Expanded - Chapter 2 is active)
 CE patches the plain and prestige vacsuits but not this one. Its armor is now scaled from CE's plain vacsuit by the vanilla ratio: suit sharp 5.92 and blunt 11.76, helmet sharp 5.92 and blunt 12.25. The suit has bulk 80 and worn bulk 15 and covers hands and feet; the helmet has bulk 4 and worn bulk 1, CE's smoke protection, and weaker armor on the eyes, nose and jaw. Applies only with Combat Extended loaded.
 
+CHAPTER 2 BELT GEAR (only when Vanilla Gravship Expanded - Chapter 2 is active)
+These get CE bulk and worn bulk: astrorig 8 and 3, disposable oxygen pack 5 and 1, gravship bombardment targeter 1 and 0.5. Applies only with Combat Extended loaded.
+
 SHUTTLES
 Every shuttle (anything built on vanilla's shuttle skyfaller, other mods' shuttles included) takes 3 times a drop pod's interception damage to shoot down: 66 instead of CE's 22.
 

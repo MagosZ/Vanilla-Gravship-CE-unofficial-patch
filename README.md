@@ -73,6 +73,9 @@ covered, and the helmet gets CE's smoke protection and weaker armor on the eyes,
 | Combat vacsuit | 0.88 → 5.92 | 0.42 → 11.76 | 80 / 15 |
 | Combat vacsuit helmet | 0.88 → 5.92 | 0.42 → 12.25 | 4 / 1 |
 
+**Chapter 2 belt gear** (Chapter 2 active). With Combat Extended loaded, these get bulk / worn bulk: astrorig 8 / 3,
+disposable oxygen pack 5 / 1, gravship bombardment targeter 1 / 0.5.
+
 ## Requirements and load order
 
 - Harmony, Combat Extended, Vanilla Gravship Expanded - Chapter 1.
@@ -108,7 +111,7 @@ RimWorld first: it locks the DLL while the mod is active.
 Layout:
 - `Patches/`: XML patches always applied: asteroids and debris as CE projectiles (`VGE_SpaceProjectiles.xml`),
   shuttle and gauntlet ship interception pools (`CIWSPools.xml`), anticraft caster beam (`VGE_Anticraft.xml`).
-- `ModPatches/VGE_Chapter2/`: Chapter 2 patches (compact turrets, anticraft emitter, combat vacsuit), loaded by `loadFolders.xml`
+- `ModPatches/VGE_Chapter2/`: Chapter 2 patches (compact turrets, anticraft emitter, combat vacsuit, belt gear bulk), loaded by `loadFolders.xml`
   only when Chapter 2 is active.
 - `Source/Projectiles/`: the CE asteroid and debris projectile classes, their straight-line trajectory worker and
   their CIWS hit check.

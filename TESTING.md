@@ -89,6 +89,10 @@ matching game conditions).
 - [ ] Info card: helmet sharp 5.92, blunt 12.25, bulk 4, worn bulk 1, with weaker armor listed for eyes, nose and jaw.
 - [ ] No XML errors at startup.
 
+## Chapter 2 belt gear (Chapter 2 active)
+- [ ] Info card bulk / worn bulk: astrorig 8 / 3, disposable oxygen pack 5 / 1, bombardment targeter 1 / 0.5.
+- [ ] Astrorig still jumps and refills from oxygen canisters; a disposable pack is still destroyed when spent.
+
 ## Save / load
 
 - [ ] Save and load mid-shower with asteroids in flight: they keep flying straight and still collide.

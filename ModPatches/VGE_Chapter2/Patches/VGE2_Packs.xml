@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+	<!-- Chapter 2's belt gear has no bulk under CE, which only patches Chapter 1's apparel. Only with Combat Extended loaded.
+	     Astrorig 8 / 3: CE's jump pack. Disposable oxygen pack 5 / 1: CE's Chapter 1 oxygen pack (8 / 1.2 at 4.6 kg) scaled
+	     to its 3 kg and rounded. Bombardment targeter 1 / 0.5: a small handheld device, below CE's smokepop belt (3 / 1). -->
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Combat Extended</li>
+		</mods>
+		<match Class="PatchOperationSequence">
+			<operations>
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/ThingDef[defName="VGE_Apparel_Astrorig"]/statBases</xpath>
+					<value>
+						<Bulk>8</Bulk>
+						<WornBulk>3</WornBulk>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/ThingDef[defName="VGE_Apparel_DisposableOxygenPack"]/statBases</xpath>
+					<value>
+						<Bulk>5</Bulk>
+						<WornBulk>1</WornBulk>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/ThingDef[defName="VGE_GravshipBombardmentTargeter"]/statBases</xpath>
+					<value>
+						<Bulk>1</Bulk>
+						<WornBulk>0.5</WornBulk>
+					</value>
+				</li>
+			</operations>
+		</match>
+	</Operation>
+
+</Patch>
