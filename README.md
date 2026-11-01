@@ -70,7 +70,7 @@ covered, and the helmet gets CE's smoke protection and weaker armor on the eyes,
 
 | | Sharp | Blunt | Bulk / worn bulk |
 |---|---|---|---|
-| Combat vacsuit | 0.88 → 5.92 | 0.42 → 11.76 | 80 / 18 |
+| Combat vacsuit | 0.88 → 5.92 | 0.42 → 11.76 | 80 / 15 |
 | Combat vacsuit helmet | 0.88 → 5.92 | 0.42 → 12.25 | 4 / 1 |
 
 ## Requirements and load order

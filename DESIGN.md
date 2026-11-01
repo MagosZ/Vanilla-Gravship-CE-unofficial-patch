@@ -293,7 +293,7 @@ vacsuit value x (combat / plain, vanilla values); the user chose this over scali
 
 | | Sharp | Blunt | Bulk / worn |
 |---|---|---|---|
-| Suit | 3.5 x 0.88/0.52 = 5.92 | 7 x 0.42/0.25 = 11.76 | 80 / 18 (plain 80 / 12; worn set by the user) |
+| Suit | 3.5 x 0.88/0.52 = 5.92 | 7 x 0.42/0.25 = 11.76 | 80 / 15 (plain 80 / 12; worn set by the user: 18 left only 1 of a human's 20 bulk free) |
 | Helmet | 3.5 x 0.88/0.52 = 5.92 | 7 x 0.42/0.24 = 12.25 | 4 / 1 (as plain) |
 
 Copied from CE's plain vacsuit: hands and feet covered; helmet smoke sensitivity -1, eyes at 0.70 and nose and jaw at

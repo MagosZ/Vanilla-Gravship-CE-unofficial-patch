@@ -6,7 +6,7 @@
 	     Armor = CE's plain vacsuit value x (combat vacsuit / plain vacsuit, both vanilla):
 	     suit sharp 3.5 x 0.88/0.52 = 5.92, blunt 7 x 0.42/0.25 = 11.76; helmet sharp 3.5 x 0.88/0.52 = 5.92,
 	     blunt 7 x 0.42/0.24 = 12.25. Heat stays VGE's, as CE keeps it on the plain suit.
-	     Suit bulk as CE's plain vacsuit (80), worn bulk 18 (plain 12). The rest follows CE's plain vacsuit: hands and feet
+	     Suit bulk as CE's plain vacsuit (80), worn bulk 15 (plain 12). The rest follows CE's plain vacsuit: hands and feet
 	     covered; helmet bulk 4 / 1, smoke sensitivity -1, weaker armor on eyes (0.70) and nose and jaw (0.50). -->
 	<Operation Class="PatchOperationFindMod">
 		<mods>
@@ -21,7 +21,7 @@
 					<xpath>Defs/ThingDef[defName="VGE_Apparel_CombatVacsuit"]/statBases</xpath>
 					<value>
 						<Bulk>80</Bulk>
-						<WornBulk>18</WornBulk>
+						<WornBulk>15</WornBulk>
 					</value>
 				</li>
 				<li Class="PatchOperationReplace">

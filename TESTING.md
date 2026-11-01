@@ -85,7 +85,7 @@ matching game conditions).
 - [ ] Centipedes take about 8 (caster) / 29 (emitter) per hit.
 
 ## Combat vacsuit (Chapter 2 active)
-- [ ] Info card: suit sharp 5.92, blunt 11.76, bulk 80, worn bulk 18, covers hands and feet.
+- [ ] Info card: suit sharp 5.92, blunt 11.76, bulk 80, worn bulk 15, covers hands and feet.
 - [ ] Info card: helmet sharp 5.92, blunt 12.25, bulk 4, worn bulk 1, with weaker armor listed for eyes, nose and jaw.
 - [ ] No XML errors at startup.
 
